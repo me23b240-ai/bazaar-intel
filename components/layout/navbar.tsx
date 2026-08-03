@@ -1,4 +1,3 @@
-import { Search } from "lucide-react";
 import Link from "next/link";
 
 const navItems = [
@@ -16,11 +15,10 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white font-semibold">
+          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-foreground text-sm font-semibold text-background">
             B
           </div>
-
-          <span className="text-xl font-semibold tracking-tight">
+          <span className="text-lg font-semibold tracking-tight text-foreground">
             Bazaar Intel
           </span>
         </Link>
@@ -37,12 +35,6 @@ export default function Navbar() {
             </Link>
           ))}
         </nav>
-
-        {/* Search */}
-        <button className="flex items-center gap-2 rounded-xl border px-4 py-2 text-sm transition-colors hover:bg-muted">
-          <Search className="h-4 w-4" />
-          Search
-        </button>
       </div>
     </header>
   );
